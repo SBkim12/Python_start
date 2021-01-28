@@ -8,7 +8,7 @@ filename = "시가총액1-200.csv"
 f = open(filename, "w", encoding="utf8", newline="") # 엑셀로 열때 한글파일 깨질시 - encoding="utf-8-sig"
 writer = csv.writer(f)
 
-title = "N	종목명	현재가	전일비	등락률	액면가	시가총액	상장주식수	외국인비율	거래량	PER	ROE	토론실".split("\t") # 탭으로 나눠진것을 리스트로 변환
+title = "N	종목명	현재가	전일비	등락률	액면가	시가총액	상장주식수	외국인비율	거래량	PER	ROE".split("\t") # 탭으로 나눠진것을 리스트로 변환
 print(type(title))
 writer.writerow(title)
 
