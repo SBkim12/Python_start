@@ -10,7 +10,7 @@ def create_soup(url):
 def scrape_weather():
     print("[오늘의 날씨]")
     url = "https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query=%EB%84%A4%EC%9D%B4%EB%B2%84+%EB%82%A0%EC%94%A8"
-    # soup = create_soup(url)
+    soup = create_soup(url)
 
     now = soup.find("p", attrs={"class","info_temperature"}).get_text().replace("도씨", "")
     detail = soup.find("p", attrs={"class","cast_txt"}).get_text()
